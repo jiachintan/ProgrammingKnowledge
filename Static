@@ -1,26 +1,29 @@
 Welcome to the ProgrammingKnowledge wiki!
 
-Difference between static and sealed class?
+1. Difference between static and sealed class?
+
 Static class
+---cannot be instantiated or inherited
+---ccan have static members only
+---cstatic constructor
+---csealed, means one cannot interit a static class from another class
 
-cannot be instantiated or inherited
-can have static members only
-static constructor
-sealed, means one cannot interit a static class from another class
 Sealed class
+---ccan be instantiated but cannot be inherited.
+---ccan have static and non-static members
 
-can be instantiaded but cannot be inherited.
-can have static and non-static members
-What is static method?
-can be called without creating an object.
-cannot call static methods using an object of the non-static class.
-can only call other static methods and access static members.
-cannot access non-static members of the class in the static methods.
-What is static variable?
-When a variable is declared as static, then a single copy of the variable is created and shared among all objects at a class level.
-All instances of the class share the same static variable.
-Static variables can be accessed using class name
-Static variables can be accessed by static and non static methods
-Static variables can be accessed using class name.
-Static variables reduce the amount of memory used by a program.
+2. What is static method?
+---ccan be called without creating an object.
+---ccannot call static methods using an object of the non-static class.
+---ccan only call other static methods and access static members.
+---ccannot access non-static members of the class in the static methods.
+
+3. What is static variable?
+---cWhen a variable is declared as static, then a single copy of the variable is created and shared among all objects at a class level.
+---cAll instances of the class share the same static variable.
+---cStatic variables can be accessed using class name
+---cStatic variables can be accessed by static and non static methods
+---cStatic variables can be accessed using class name.
+---cStatic variables reduce the amount of memory used by a program.
+
 Source: https://www.geeksforgeeks.org/difference-between-static-and-non-static-variables-in-java/
