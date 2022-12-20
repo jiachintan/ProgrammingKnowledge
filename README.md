@@ -1,3 +1,3 @@
 # ProgrammingKnowledge
 
-Learn the basic programming coding term.
+Learn the basic programming coding knowledge.
