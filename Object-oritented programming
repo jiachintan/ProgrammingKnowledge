@@ -1,0 +1,28 @@
+OOP and SOLID principles
+
+Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code. 
+The data is in the form of fields (often known as attributes or properties), and the code is in the form of procedures (often known as methods).
+
+SOLID principle:
+5 principles of Object-Oriented class design. 
+They are a set of rules and best practices to follow while designing a class structure.
+S = Single Responsibility Principle
+O = Open/Closed Principle
+L = Liskov Substitution Principle
+I = Interface Segregation Principle
+D = Dependency Inversion Principle
+
+Single Resposibility Principle
+Each software module should have one and only one reason to change.
+
+Open/Closed Principle
+Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+
+Liskov Substitution Principle
+Subtypes must be substitutable for their base type.
+
+Liskov Substitution Principle
+Clients should not be forced to depend on methods they do not use.
+
+Dependency Inversion Principle
+High-level modules should not depend on low-level modules. Both should depend on abstraction
