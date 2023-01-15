@@ -1,0 +1,26 @@
+From reference book Design Patterns - Elements of Reusable Object-Oriented Software.
+- 23 design patterns which can be classified in three categories: Creational, Structural and Behavioral patterns.
+Creational Patterns
+--Design patterns provide a way to create object.
+Structural Patterns
+--Design patterns concern class and object composition.
+Behavioral Patterns
+--Design patterns are specifically concerned with communication between objects.
+
+1. Factory Pattern - Creational
+    In Factory pattern, we create object without exposing the creation logic to the client and refer to newly created object using a common interface.
+2. Abstract Factory Pattern - Creational
+    In Abstract Factory pattern an interface is responsible for creating a factory of related objects without explicitly specifying their classes.
+3. Singleton Pattern - Creational
+    a single class which is responsible to create an object while making sure that only single object gets created. 
+    This class provides a way to access its only object which can be accessed directly without need to instantiate the object of the class.
+4. Builder Pattern - Creational
+    Builder pattern builds a complex object using simple objects and using a step by step approach.
+5. Prototype Pattern - Creational
+    This pattern involves implementing a prototype interface which tells to create a clone of the current object. 
+    This pattern is used when creation of object directly is costly. 
+    
+6. Adapter Pattern - Structural 
+    Adapter pattern works as a bridge between two incompatible interfaces.
+    combines the capability of two independent interfaces.
+    A single class which is responsible to join functionalities of independent or incompatible interfaces.
