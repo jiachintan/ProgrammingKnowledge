@@ -1,0 +1,11 @@
+Explicitly typed variables
+- variables must be declared with the data type.
+Example:
+int i = 100;// explicitly typed variable
+
+
+Implicitly Typed Local Variable
+Example:
+var j = 100; // implicitly typed local variable
+
+var can be used to declare any built-in data type or a user-defined type or an anonymous type variable.
