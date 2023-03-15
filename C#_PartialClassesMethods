@@ -1,0 +1,87 @@
+C#_PartialClassesMethods
+
+https://www.tutorialsteacher.com/csharp/csharp-partial-class
+
+Partial Classes
+Split the implementation of a class, a struct, a method, or an interface in multiple .cs files
+
+Rules for Partial Classes
+-All the partial class definitions must be in the same assembly and namespace.
+-All the parts must have the same accessibility like public or private, etc.
+-If any part is declared abstract, sealed or base type then the whole class is declared of the same type.
+-Different parts can have different base types and so the final class will inherit all the base types.
+-The Partial modifier can only appear immediately before the keywords class, struct, or interface.
+-Nested partial types are allowed.
+
+EmployeeProps.cs
+public partial class Employee
+{
+    public int EmpId { get; set; }
+    public string Name { get; set; }
+}
+
+EmployeeMethods.cs
+public partial class Employee
+{
+    //constructor
+    public Employee(int id, string name){
+        this.EmpId = id;
+        this.Name = name;
+    }
+
+    public void DisplayEmpInfo() {
+        Console.WriteLine(this.EmpId + " " this.Name);
+    }
+}
+
+Combined Class
+public class Employee
+{
+    public int EmpId { get; set; }
+    public string Name { get; set; }
+
+    public Employee(int id, string name){
+        this.EmpId = id;
+        this.Name = name;
+    }
+
+    public void DisplayEmpInfo(){
+        Console.WriteLine(this.EmpId + " " this.Name );
+    }
+}
+
+----------------------------------------------------------------------
+
+Partial Methods
+
+One of the two .cs files must contain a signature of the method, and other file can contain an optional implementation of the partial method.
+Both declaration and implementation of a method must have the partial keyword.
+
+EmployeeProps.cs
+public partial class Employee
+{
+    public Employee() { 
+        GenerateEmpId();
+    }
+    public int EmpId { get; set; }
+    public string Name { get; set; }
+
+    partial void GenerateEmployeeId();
+
+}
+
+EmployeeMethods.cs
+public partial class Employee
+{
+    partial void GenerateEmployeeId()
+    {
+        this.EmpId = random();
+    }
+}
+
+Rules for Partial Methods
+-Partial methods must use the partial keyword and must return void.
+-Partial methods can have in or ref but not out parameters.
+-Partial methods are implicitly private methods, so cannot be virtual.
+-Partial methods can be static methods.
+-Partial methods can be generic.
