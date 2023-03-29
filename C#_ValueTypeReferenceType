@@ -6,7 +6,9 @@ A data type is a value type if it holds a data value within its own memory space
 When you pass a value-type variable from one method to another, the system creates a separate copy of a variable in another method. 
 If value got changed in the one method, it wouldn't affect the variable in another method.
 
+
 -------------------------------------------------------------------------------------------------------------------------------------
+
 Reference Type
 A reference type contains a pointer to another memory location that holds the data.
 
@@ -15,3 +17,33 @@ So, If we change the value of a variable in a method, it will also be reflected 
 
 String is a reference type, but it is immutable. 
 It means once we assigned a value, it cannot be changed
+Example 1:
+static void ChangeReferenceType(Student std2)
+{
+    std2.StudentName = "Steve";
+}
+
+static void Main(string[] args)
+{
+    Student std1 = new Student();
+    std1.StudentName = "Bill";
+    
+    ChangeReferenceType(std1);
+
+    Console.WriteLine(std1.StudentName); // output is "Steve"
+}
+
+Exmaple 2:
+static void ChangeReferenceType(string name)
+{
+    name = "Steve";
+}
+
+static void Main(string[] args)
+{
+    string name = "Bill";
+    
+    ChangeReferenceType(name);
+
+    Console.WriteLine(name); // output is "Bill"
+}
