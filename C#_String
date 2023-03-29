@@ -1,0 +1,6 @@
+In C#, the string type is immutable.
+It means a string cannot be changed once created. 
+For example, a new string, "Hello World!" will occupy a memory space on the heap. 
+
+ Each time you concatenate strings, .NET CLR will create a new memory location for the concatenated string. 
+ So, it is recommended to use StringBuilder instead of string if you concatenate more than five strings.
