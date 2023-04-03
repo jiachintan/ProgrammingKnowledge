@@ -1,0 +1,23 @@
+https://www.tutorialsteacher.com/articles/ref-keyword
+
+To pass the value type variables by reference.
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int myNum = 10;
+        ProcessNumber(ref myNum); //must use ref to pass the parameter by reference 
+           
+        Console.WriteLine(myNum);
+        Console.ReadLine();
+    }
+ 
+    public static void ProcessNumber(ref int num)
+    {
+        num = 100;
+    }           
+}
+
+Output:
+100
