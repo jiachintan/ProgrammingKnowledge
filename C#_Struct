@@ -1,0 +1,61 @@
+Reference: https://www.tutorialsteacher.com/csharp/csharp-struct
+
+struct is the value type data type that represents data structures. 
+It can contain a parameterized constructor, static constructor, constants, fields, methods, properties, indexers, operators, events, and nested types.
+
+Summary
+struct can include constructors, constants, fields, methods, properties, indexers, operators, events & nested types.
+struct cannot include a parameterless constructor or a destructor.
+struct can implement interfaces, same as class.
+struct cannot inherit another structure or class, and it cannot be the base of a class.
+struct members cannot be specified as abstract, sealed, virtual, or protected.
+
+struct Coordinate
+{
+    private int _x, _y;
+
+    public int x 
+    {
+        get{
+            return _x;
+        }
+
+        set{
+            _x = value;
+            CoordinatesChanged(_x);
+        }
+    }
+
+    public int y
+    {
+        get{
+            return _y;
+        }
+
+        set{
+            _y = value;
+            CoordinatesChanged(_y);
+        }
+    }
+
+    public event Action<int> CoordinatesChanged;
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        Coordinate point = new Coordinate();
+        
+        point.CoordinatesChanged += StructEventHandler;
+        point.x = 10;
+        point.y = 20;
+    }
+
+    static void StructEventHandler(int point)
+    {
+        Console.WriteLine("Coordinate changed to {0}", point);
+    }
+}
